@@ -4,31 +4,10 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		
-		<!-- Try multiple CDN sources -->
 		<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
-		<script>
-			// Fallback CDN
-			if (!window.LightweightCharts) {
-				document.write('<script src="https://cdn.jsdelivr.net/npm/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"><\/script>');
-			}
-		</script>
-		
-		<!-- Debug script -->
-		<script>
-			window.addEventListener('load', function() {
-				console.log('Window loaded');
-				console.log('LightweightCharts available:', !!window.LightweightCharts);
-				if (window.LightweightCharts) {
-					console.log('LightweightCharts object:', window.LightweightCharts);
-					console.log('createChart function:', typeof window.LightweightCharts.createChart);
-				}
-			});
-		</script>
-		
 		%sveltekit.head%
 	</head>
-	<body data-sveltekit-preload-data="hover" class="bg-gray-900">
+	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
 	</body>
 </html>
