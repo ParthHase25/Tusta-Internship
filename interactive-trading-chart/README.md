@@ -1,38 +1,53 @@
-# sv
+Installation
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+1. Clone the repository
 
-## Creating a project
+git clone <https://github.com/ParthHase25/Tusta-Internship>
 
-If you're seeing this, you've probably already done this step. Congrats!
+cd interactive-trading-chart
 
-```bash
-# create a new project in the current directory
-npx sv create
+2. Install dependencies
 
-# create a new project in my-app
-npx sv create my-app
-```
+npm install
 
-## Developing
+3. Start development server
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+4. Open in browser Navigate to http://localhost:5173
 
-## Building
 
-To create a production version of your app:
+5. Production Build
 
-```bash
 npm run build
-```
+npm run preview
 
-You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+🎯 Features
+
+1. Real-time Data: Live cryptocurrency prices from Binance API
+2. Interactive Trendlines: Click twice to draw, persistent storage per trading pair
+3. Multiple Assets: 10+ cryptocurrency pairs (BTC, ETH, SOL, etc.)
+4. Multiple Timeframes: 1m to 1w intervals
+5. Responsive Design: Works on desktop and mobile
+6. Keyboard Shortcuts: Delete (remove), Escape (cancel)
+
+
+Assumptions Made
+
+1. Data Requirements
+
+Binance API provides sufficient accuracy for analysis
+200 candles per timeframe adequate for chart display
+No real-time WebSocket needed (polling sufficient)
+
+2. Storage Limitations
+
+localStorage 5-10MB limit sufficient for typical usage
+No cloud sync or multi-device support required
+Browser-local storage acceptable for this use case
+
+
+[View the deployed app on Vercel]
+
+(https://tusta-internship.vercel.app/)
